@@ -7,7 +7,7 @@
 + Windows：支持XP以上所有版本，支持32位，64位环境； 
 + [恩布网站](http://www.entboost.com)
 
-## entboost, 1.22.0.481 --2016-09-12 [百度云盘下载](http://pan.baidu.com/s/1hr2DA1u)-[360云盘下载（提取码：53f4）](https://yunpan.cn/ckfycNLXfBXFU)
+## entboost, 1.22.0.481 --2016-09-12 (Last update: 2016-10-08) [百度云盘下载](http://pan.baidu.com/s/1hr2DA1u)-[360云盘下载（提取码：53f4）](https://yunpan.cn/ckfycNLXfBXFU)
 + 增加协同办公管理应用，主要包括工作看板、工作计划、任务管理、工作日报等功能模块；
 + 云盘、群共享，服务端增加文件压缩机制，同时提高文件上传和下载速度；
 + 解决“邮件应用”某些邮件不能正常接收显示问题；
