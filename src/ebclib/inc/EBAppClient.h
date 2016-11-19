@@ -571,6 +571,8 @@ public:
 	参数：bPrivate 悄悄话功能 true:以私聊方式发给指定用户，会话其他人看不到 false:会话其他成员也可以看到
 	====================================================================*/
 	int EB_SendRich(eb::bigint nCallId,const EB_ChatRoomRichMsg* pRichMsg,eb::bigint nToUserId=0,bool bPrivate=false);
+	int EB_SendMapPos(eb::bigint nCallId,const char* sMapPosData,eb::bigint nToUserId=0,bool bPrivate=false);
+	int EB_SendUserData(eb::bigint nCallId,const char* sUserData,unsigned long nDataSize,eb::bigint nToUserId=0,bool bPrivate=false);
 
 	/****
 	功能：发送文件
@@ -853,6 +855,12 @@ public:
 	功能：获取群组（部门）成员在线状态
 	====================================================================*/
 	bool EB_GetMemberLineState(eb::bigint nMemberId,EB_USER_LINE_STATE& pOutLineState) const;
+
+	/****
+	功能：获取群组（部门）头像文件
+	====================================================================*/
+	bool EB_GetMemberHeadFile(eb::bigint nMemberId,eb::bigint& pOutResourceId,mycp::tstring& pOutHeadPath,int& pOutFileSize);
+	bool EB_GetMemberHeadFile(eb::bigint nGroupId,eb::bigint nUserId,eb::bigint& pOutResourceId,mycp::tstring& pOutHeadPath,int& pOutFileSize);
 
 	/****
 	功能：获取我的群组（部门）成员信息
