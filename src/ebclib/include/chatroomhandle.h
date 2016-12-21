@@ -513,7 +513,7 @@ public:
 
 	virtual void OnSendRich(const CCrRichInfo& pRichInfo) {}
 	virtual int OnReceiveRich(const CCrRichInfo& pRichInfo) {return 0;}
-	virtual void OnMsgReceipt(const CCrRichInfo& pRichInfo) {}
+	virtual void OnMsgReceipt(const CCrRichInfo& pRichInfo, int nAckType) {}
 	virtual void OnSendingFile(const CCrFileInfo& pFileInfo) {}
 	virtual void OnSentFile(const CCrFileInfo& pFileInfo) {}
 	virtual void OnCancelFile(const CCrFileInfo& pFileInfo) {}

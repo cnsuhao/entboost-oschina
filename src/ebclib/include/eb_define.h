@@ -69,6 +69,8 @@ typedef enum EB_SYSTEM_PARAMETER
 	, EB_SYSTEM_PARAMETER_DEFAULT_BROWSER_TYPE			// int 0=谷歌Chrome浏览器 1=微软IE浏览器
 	, EB_SYSTEM_PARAMETER_LOGON_USER_DATA					// char* set only
 	, EB_SYSTEM_PARAMETER_DISABLE_MSG_RECEIPT			// int 0/1
+	, EB_SYSTEM_PARAMETER_LICENSE_TYPE						// int 许可类型；0=未授权；1=终身授权；2=时间授权
+	, EB_SYSTEM_PARAMETER_STAT_SUB_GROUP_MEMBER		// int 是否统计子部门人数 0/1
 };
 
 /*==========================================================
@@ -100,7 +102,8 @@ typedef enum EB_BROADCAST_SUB_TYPE
 	EB_BROADCAST_SUB_TYPE_BC
 	, EB_BROADCAST_SUB_TYPE_NEW_EMAIL
 	, EB_BROADCAST_SUB_TYPE_UNREAD_EMAIL
-	, EB_BROADCAST_SUB_TYPE_TW_MSG		// 协同办公提醒消息
+	, EB_BROADCAST_SUB_TYPE_TW_MSG							// 协同办公提醒消息
+	, EB_BROADCAST_SUB_TYPE_SUBID_UNREAD_MSG		// 订购ID，未读消息；content格式: [订购ID],[未读消息数量]，例如: "1002300105,3" 表示 1002300105 该订购ID，有3条未读消息；
 };
 
 /*==========================================================
@@ -127,6 +130,7 @@ typedef enum EB_FUNC_LOCATION
 	, EB_FUNC_LOCATION_RIGHT_CLICK_MENU_CHAT_RECORD	= 0x4000		// 聊天记录右键菜单
 	, EB_FUNC_LOCATION_ALL_RIGHT_CLICK_MENU_CHAT = EB_FUNC_LOCATION_RIGHT_CLICK_MENU_USER_CHAT|EB_FUNC_LOCATION_RIGHT_CLICK_MENU_GROUP_CHAT|EB_FUNC_LOCATION_RIGHT_CLICK_MENU_CHAT_RECORD
 	, EB_FUNC_LOCATION_CHAT_COPY_TEXT_TOOLBAR				= 0x8000		// 聊天窗口复制文本工具栏
+	, EB_FUNC_LOCATION_DISABLE_PC										= 0x10000		// 禁用PC端
 };
 
 /*==========================================================
